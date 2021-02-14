@@ -4,12 +4,12 @@ Bruteforcing usually requires you to have wordlists with which you will run the 
 
 Assume a directory structure such as:
 
-*Subdomains
-  *subdomainwordlist1.txt
-  *subdomainwordlist2.txt
-*Directories
-  *directorywordlist1.txt
-  *directorywordlist2.txt
+* Subdomains
+  * subdomainwordlist1.txt
+  * subdomainwordlist2.txt
+* Directories
+  * directorywordlist1.txt
+  * directorywordlist2.txt
   
 which has two directories, each with multiple wordlists.
 
