@@ -10,6 +10,7 @@ if [ $# -lt 1 ]
 then
 	echo -e "Merge files by Patrick Gatiri. \n"
 	echo -e "Usage : ./mergeFiles directoryName"
+	echo -e "Note that the directory name should not include the trailing slash.\n"
 	echo -e "Example : ./mergeFiles ."
 
 	exit 1
