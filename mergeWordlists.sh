@@ -33,10 +33,7 @@ then
 	exit 1
 fi
 
-workingDirectory=$(pwd)
-workingDirectory+="/"
-workingDirectory+=$directoryName
-echo -e "Merging ${numberOfFiles} .txt files in ${workingDirectory}"
+echo -e "Merging ${numberOfFiles} .txt files in ${directoryName}"
 
 mergeFile=""
 
