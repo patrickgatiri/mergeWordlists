@@ -16,7 +16,8 @@ then
 	exit 1
 fi
 
-directoryName=$1
+directory=$1
+directoryName=$( sed 's/\/$//g' <<< $directory )
 
 if ! [ -d $directoryName ]
 then
@@ -40,26 +41,26 @@ echo -e "Merging ${numberOfFiles} .txt files in ${workingDirectory}"
 
 mergeFile=""
 
-if [ -e "${directoryName}-mergeFile" ]
+if [ -e "${directoryName}/mergeFile" ]
 then
-	if [ -e "${directoryName}-mergeFile-50" ]
+	if [ -e "${directoryName}/mergeFile-50" ]
 	then
 		echo "Final files have reached limit. Please delete some and try again"
 		exit 1
 	else
 		for i in {1..50} 
 		do
-			if [ -e "${directoryName}-mergeFile-${i}" ]
+			if [ -e "${directoryName}/mergeFile-${i}" ]
 			then
 				continue
 			else
-				mergeFile="${directoryName}-mergeFile-${i}" 
+				mergeFile="${directoryName}/mergeFile-${i}" 
 				break
 			fi
 		done
 	fi
 else
-	mergeFile="${directoryName}-mergeFile"
+	mergeFile="${directoryName}/mergeFile"
 fi
 
 touch $mergeFile
